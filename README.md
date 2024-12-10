@@ -45,7 +45,7 @@ And you can also apply your own filters:
             
         return render(request, "detail_page.html", context)
 
-    
+ 
 from django_query_optimizer import optimize_query
 from .models import YourModel
 
