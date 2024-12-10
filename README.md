@@ -49,7 +49,7 @@ def detail_view(request, id):
     return render(request, "detail_page.html", context)
 ```
     
----
+Other example:
 
 ```python
 from django_query_optimizer import optimize_query
