@@ -20,48 +20,48 @@ $ pip install django_query_optimizer
 
 Django query optimizer is easy to use and you can just import it and assign your model to ```optimize_query```:
 
-    ```python
-    from django_query_optimizer import optimize_query
-    from .models import YourModel
+```python
+from django_query_optimizer import optimize_query
+from .models import YourModel
 
-    def your_view(request):
-        queryset = optimize_query(YourModel)
-        context ={
-            'objects' : queryset 
-        }
-            
-        return render(request, "your_page.html", context)
-    ```
+def your_view(request):
+    queryset = optimize_query(YourModel)
+    context ={
+        'objects' : queryset 
+    }
+        
+    return render(request, "your_page.html", context)
+```
 
 
 And you can also apply your own filters:
 
-    ‍‍‍‍‍‍‍```python
-    from django_query_optimizer import optimize_query
-    from .models import YourModel
+‍‍‍‍‍‍‍```python
+from django_query_optimizer import optimize_query
+from .models import YourModel
 
-    def detail_view(request, id):
-        queryset = optimize_query(YourModel).get(id = id)
-        context ={
-            'object' : queryset 
-        }
-            
-        return render(request, "detail_page.html", context)
-    ```
+def detail_view(request, id):
+    queryset = optimize_query(YourModel).get(id = id)
+    context ={
+        'object' : queryset 
+    }
+        
+    return render(request, "detail_page.html", context)
+```
     
 ---
 
-    ```python
-    from django_query_optimizer import optimize_query
-    from .models import YourModel
+```python
+from django_query_optimizer import optimize_query
+from .models import YourModel
 
-    def filters_view(request):
-        queryset = optimize_query(YourModel).filter(is_active=True)
-        context ={
-            'objects' : queryset 
-        }
-            
-        return render(request, "filters_page.html", context)
-    ```
+def filters_view(request):
+    queryset = optimize_query(YourModel).filter(is_active=True)
+    context ={
+        'objects' : queryset 
+    }
+        
+    return render(request, "filters_page.html", context)
+```
 
 Was it useful for you? Leave a star ⭐⭐⭐ - 2024 Yasin Karbasi
