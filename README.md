@@ -34,7 +34,8 @@ Django query optimizer is easy to use and you can just import it and assign your
 
 And you can also apply your own filters:
 
-```from django_query_optimizer import optimize_query
+```python
+from django_query_optimizer import optimize_query
 from .models import YourModel
 
 def detail_view(request, id):
@@ -43,10 +44,11 @@ def detail_view(request, id):
         'object' : queryset 
     }
         
-    return render(request, "detail_page.html", context)```
+    return render(request, "detail_page.html", context)
 
 
-```from django_query_optimizer import optimize_query
+```python
+from django_query_optimizer import optimize_query
 from .models import YourModel
 
 def filters_view(request):
@@ -55,6 +57,6 @@ def filters_view(request):
         'objects' : queryset 
     }
         
-    return render(request, "filters_page.html", context)```
+    return render(request, "filters_page.html", context)
 
 Was it useful for you? Leave a star ⭐⭐⭐ - 2024 Yasin Karbasi
