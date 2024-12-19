@@ -1,0 +1,6 @@
+dist/
+build/
+*.egg-info/
+
+LICENSE
+setup.py
